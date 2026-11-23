@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club Desk</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><div><span class="eyebrow">MEMBERSHIP & EVENTS</span><h1>Club Desk</h1></div><span class="badge">Management</span></header>
+  <main>
+    <section class="stats" aria-label="Club overview">
+      <article><span>Active members</span><strong id="activeCount">—</strong></article>
+      <article><span>Upcoming events</span><strong id="eventCount">—</strong></article>
+      <article><span>Total bookings</span><strong id="bookingCount">—</strong></article>
+    </section>
+    <section class="grid">
+      <article class="panel"><div class="section-title"><div><span class="eyebrow">DIRECTORY</span><h2>Members</h2></div></div>
+        <form id="memberForm" class="member-form">
+          <input name="first_name" placeholder="First name" required maxlength="60">
+          <input name="last_name" placeholder="Last name" required maxlength="60">
+          <input name="email" type="email" placeholder="Email address" required maxlength="254">
+          <input name="phone" placeholder="Phone (optional)" maxlength="30">
+          <button type="submit">Add member</button>
+        </form><p id="memberMessage" class="message" role="status"></p>
+        <div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Joined</th><th>Status</th></tr></thead><tbody id="membersBody"></tbody></table></div>
+      </article>
+      <article class="panel"><div class="section-title"><div><span class="eyebrow">WHAT'S ON</span><h2>Events</h2></div></div>
+        <div id="eventsList" class="events-list"></div>
+        <form id="bookingForm" class="booking-form"><h3>Book a member</h3>
+          <label>Member<select id="memberSelect" required><option value="">Choose a member</option></select></label>
+          <label>Event<select id="eventSelect" required><option value="">Choose an event</option></select></label>
+          <button type="submit">Confirm booking</button><p id="bookingMessage" class="message" role="status"></p>
+        </form>
+      </article>
+    </section>
+    <p id="loadError" class="error" role="alert"></p>
+  </main>
+  <footer>Club Desk <span>•</span> MySQL-backed membership management</footer>
+  <script src="{{ url_for('static', filename='app.js', v=2) }}"></script>
+</body></html>
