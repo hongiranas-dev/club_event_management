@@ -58,6 +58,4 @@ Requirements: Python 3.10+ and MySQL 8+.
 - `requirements.txt` — Python dependencies.
 - `PROJECT_OVERVIEW.md` — detailed source-based project documentation.
 
-## Security note
 
-This is a learning/demo application. It does not implement user authentication or authorization. Do not expose it publicly with production data or credentials. Keep real passwords in local environment variables, never commit `.env` files, and use a least-privilege MySQL account.
