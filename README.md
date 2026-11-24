@@ -23,7 +23,7 @@ For the detailed architecture, ER diagram, API reference, data flow, and setup g
 
 ## Quick start
 
-Requirements: Python 3.10+ and MySQL 8+.
+Requirements: Python 3.10+ and MySQL 8+
 
 1. Create the schema and sample data:
 
